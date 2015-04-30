@@ -1,1 +1,243 @@
-Hello World
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>Article Rewriter</title>
+  <link rel="canonical" href="http://myfirstmotor.ie">
+  <script type='text/javascript' src='http://code.jquery.com/jquery-2.0.2.js'></script>
+  <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/bootstrap-modal.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/app.css">
+  <script type='text/javascript' src="http://getbootstrap.com/dist/js/bootstrap.js"></script>
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
+  <script type="text/javascript" src="https://www.dropbox.com/static/api/2/dropins.js" id="dropboxjs" data-app-key="a1jy330vpyki64r"></script>
+  <script type="text/javascript" src="https://js.live.net/v5.0/OneDrive.js" id="onedrive-js" client-id="000000004414DA41"></script>
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+
+<script type='text/javascript'>//<![CDATA[ 
+$(window).load(function(){
+
+    $('body').popover({
+            selector: '.has-popover'
+        });
+    $("select[name=list-item]").focus(function () {
+        // Store the current value on focus, before it changes
+        //previous = this.value;
+		Spin.saveData();
+    });
+	$("#paragraphs2").focus(function () {
+        // Store the current value on focus, before it changes
+        //previous = this.value;
+		Spin.saveData('frm_rewrite2');
+    });
+	/*$("#poplevel").click(function () {
+	Spin.selection();
+	    });*/
+}); 
+
+window.onload = function() {
+    //var saverOptions = { file: "file", filename: "file.txt" /*other options */ };  
+	var saverOptions = {
+  file: "file",
+  fileName: 'info.txt'
+};
+    var saverButton = OneDrive.createSaveButton(saverOptions); 
+    document.getElementById("save").appendChild(saverButton); 
+}
+//]]>
+</script>
+
+</script>
+</head>
+<body>
+<div id="wrapper" class="page-container">
+    <div id="page-content" class="col-md-6">
+    <!-- Nav tabs -->
+    <ul id="navigator" class="nav nav-tabs" role="tablist">
+        <li class="active"><a class="brand" href="#home" role="tab" data-toggle="tab">SweetLime ReWriter</a></li>
+      <li>
+          <a href="#original" role="tab" data-toggle="tab">
+              <i class="fa fa-home"></i> Original
+          </a>
+      </li>
+      <li><a href="#profile" role="tab" data-toggle="tab" onclick="Spin.buildList()">
+          <i class="fa fa-user"></i> Paragraphs
+          </a>
+      </li>
+      <li>
+          <a href="#messages" role="tab" data-toggle="tab" onclick="Spin.renderSpun()">
+              <i class="fa fa-envelope"></i> Spun
+          </a>
+      </li>
+      <li>
+          <a href="#settings" role="tab" data-toggle="tab">
+              <i class="fa fa-cog"></i> Hot Keys
+          </a>
+      </li>
+    </ul>
+    
+    <!-- Tab panes -->
+    <div class="tab-content">
+            <div class="tab-pane fade active in" id="home">
+	           <div class="control-group">
+                <h3>Get Started From Here</h3>
+                <p>Next Tab for Composing Original Source of Contents</p>   
+                </div>
+            </div>
+      <div class="tab-pane fade" id="original">
+	  <div class="control-group">
+          <label class="form-label">Original Article</label>
+		  <textarea id="txtOriginal" class="form-control"></textarea>
+		  </div>
+      </div>
+      <div class="tab-pane fade" id="profile">
+         <div class="control-group">
+          <label class="form-label">Paragraph</label>
+		  <div class="styled-select yellow rounded"><select id="paragraphs" class="form-control" name="list-item" onchange="Spin.selection()"></select></div>
+		  <input id="prender" class="form-control" type="text" value="" disabled/>
+		  <div id="rewrite-controller" class="addRewrite">
+		  <span class="pull-right span4">
+           <button type="button" class="btn btn-default has-popover" data-container="body" data-toggle="popover" data-placement="top" title="Help anf Tips" data-content="Save data efficiently by clicking next Button (Save Data) for Add/Remove/Change">?</button>   
+           <button id="poplevel" type="button" class="btn btn-info" data-toggle="modal" data-target="#largeModal" onclick="Spin.splitSentance()">Sentence</button>
+		  <button id="data-save" class="btn btn-primary btn-small" onclick="Spin.saveData()" disabled="disable"><strong style="font-size:14px;">Save</strong></button>      
+          <button class="btn btn-success btn-small" onclick="Spin.addtoPointr()"><strong style="font-size:14px;">+</strong></button>
+          </span>
+		  <label class="form-label"><span id="counter">1</span> paragraph(s) rewrite</label>
+		  
+		  <form id="frm_rewrite">
+		  <textarea id="pgraphRewrite" class="form-control" name="FormIO[]"></textarea>
+		  </form>
+		  </div>
+		  </div>
+         
+      </div>
+      <div class="tab-pane fade" id="messages">
+          <h2>Spun</h2>
+          <div id="spunReadOnly" class="well"></div>
+		  <button id="create" class="btn btn-default btn-large" onclick="Spin.saveFile()">Create file</button>
+		<div id="cloudjs" style="display:none;" class="container">  
+	  <a class="g-savetodrive" data-src="http://myfirstmotor.ie/spin3/info.txt" data-filename="info.txt" data-sitename="My Company Name"></a>
+		  <a href="img/koala_transparent.png" class="dropbox-saver" data-filename="info.txt"></a>
+		  <input id="file" name="file" type="file"/>
+			<div id="save"></div>
+	  </div>		
+      </div>
+      <div class="tab-pane fade" id="settings">
+          <h2>Hot Keys/Settings</h2>
+		  <p>Super Spinner Hot Keys
+When Spinning Paragraphs:<br/>
+<strong>ALT-A </strong> => Add New Rewrite
+<br/>
+<strong>ALT-UP </strong> => Move To Previous Rewrite
+<br/>
+<strong>ALT-DOWN </strong> => Move To Next Rewrite
+<br/>
+<strong>ALT-LEFT </strong> => Move To Previous Paragraph
+<br/>
+<strong>ALT-RIGHT </strong> => Move To Next Paragraph
+<br/>
+<strong>ALT-S </strong> => Spin Sentences In Current Rewrite
+<br/>
+When Spinning Sentences:
+<br/>
+<strong>ALT-A </strong> => Add New Rewrite 
+<br/>
+<strong>ALT-UP </strong> => Move To Previous Rewrite
+<br/>
+<strong>ALT-DOWN </strong> => Move To Next Rewrite
+<br/>
+<strong>ALT-LEFT </strong> => Move To Previous Sentence
+<br/>
+<strong>ALT-RIGHT </strong> => Move To Next Sentence
+</p>
+          
+      </div>
+    </div>
+    </div>
+    <div id="scrapper-section" class="col-md-6">
+    <div id="toolbar" class="media-uri col-md-12">
+        <!-- media tabs -->
+        <ul id="media-menu" class="nav nav-tabs" role="tablist">
+        <li class="active"><a href="#scrapper" role="tab" data-toggle="tab">Scrapper</a></li>
+      <li>
+          <a href="#rss-feed" role="tab" data-toggle="tab">
+              <icon class="fa fa-rss"></icon></a>
+      </li>
+      <li><a href="#twitter-feed" role="tab" data-toggle="tab">
+          <i class="fa fa-twitter"></i> </a>
+      </li>
+       <li><a href="#facebook-feed" role="tab" data-toggle="tab">
+          <i class="fa fa-facebook"></i> </a>
+      </li>
+     <li><a href="#media-plus" role="tab" data-toggle="tab">
+          <i class="fa fa-plus"></i> </a>
+      </li> 
+    </ul>
+        <div class="tab-content">
+            <div class="tab-pane fade active in" id="scrapper">
+	           <div class="control-group"> <span class="mute">Choose an media to extract content</span></div>
+            </div>
+            <div class="tab-pane fade" id="rss-feed">
+	           <div class="control-group"> <p>Grab Content from RSS Link</p>
+                   <p><input class="form-control"> <button class="btn btn-success btn-sm">Grab</button></p></div>
+            </div>
+            <div class="tab-pane fade" id="twitter-feed">
+	           <div class="control-group"> Grab Content using @twitter username, #hask tag </div>
+            </div>
+            <div class="tab-pane fade" id="facebook-feed">
+	           <div class="control-group"> Grab Content from RSS Link </div>
+            </div>
+            <div class="tab-pane fade" id="media-plus">
+	           <div class="control-group"> Coming Soon! </div>
+            </div>
+        </div>
+    </div> <!-- end of toolbar -->
+    
+    <div id="feed-items-list" class="col-md-12">
+        <div class="well well-md">
+            <p><img src="assets/img/social-media-icons-wheel1.png" width="240" /></p>
+            <p><span class="mute text-lg">No Items to Display</span></p>
+        </div>
+    </div>    
+    
+    </div>
+</div>
+<div class="modal fade" id="largeModal" tabindex="-1" role="dialog" aria-labelledby="largeModal" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel"><span style="color:#2b3d7a;text-transform:uppercase;">Super Spin </span>- Sentence Level</h4>
+      </div>
+      <div class="modal-body">
+		 <div class="control-group">
+          <label class="form-label">Paragraph</label>
+		  <div class="styled-select yellow rounded">
+		  <select id="paragraphs2" class="form-control" name="list-item2" onchange="Spin.testSelection()"></select>
+		  </div>
+		  <input id="prender2" class="form-control" type="text" disabled/>
+		  <div id="rewrite-controller" class="addRewrite">
+		  <span class="pull-right span4"> 
+		  <button type="button" class="btn btn-success btn-small has-popover" onclick="Spin.addtoPointr('level2')"><strong style=font-size:14px;">+</strong></button>		  
+          
+          </span>
+		  <label class="form-label"><span id="counter">1</span> paragraph(s) rewrite</label>
+		  
+		  <form id="frm_rewrite2">
+		  <textarea id="pgraphRewrite2" class="form-control" name="FormIO2[]"></textarea>
+		  </form>
+		  </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary btn-small" onclick="Spin.saveData()">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+<script type='text/javascript' src='jspin.js'></script>
+
+</body>
+</html>
