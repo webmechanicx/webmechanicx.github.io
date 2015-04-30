@@ -1,0 +1,119 @@
+    body {
+	backgroud:#f8f8f8 !important;
+   /* margin: 5px;
+    background: #A6A6A6;*/
+}
+html{}
+.nav-tabs > li > a.brand {
+    background: #2b3d7a !important;
+    border-bottom-color: #000;
+    color: aqua;
+}
+a:focus{outline:none !important;outline-offset: -2px !important;}
+      #frm_rewrite,#frm_rewrite2{
+          margin-top: 20px;
+      }
+      #wrapper{margin-top: 3.05%; overflow:hidden; backgroud-color:#edeff5 !important;}
+      .page-container{ width: 100%;}
+#prender.form-control,#prender2.form-control{ height:65px; margin-top:20px;}
+.modal-body #rewrite-controller{min-height: 280px;}
+#profile,#txtOriginal{min-height: 500px;}
+#rewrite-controller{margin-top: 20px;}
+#txtOriginal{width: 100%;
+height: 370px;
+box-sizing: border-box;
+color: #666;
+border-radius:0px;
+background: url("../img/notepad.png") repeat scroll 0% 0% transparent;
+font: 14px/25px verdana;
+padding: 2px 10px;
+border: 1px solid #DDD;
+transition: all 0.1s ease-in-out 0s;
+animation-delay: 250ms;
+animation-name: slideInRight;
+animation-duration: 1s;
+animation-fill-mode: both;}
+/* Tab Navigation */
+.nav-tabs {
+    margin: 0;
+    padding: 0;
+    border: 0;    
+}
+.nav-tabs > li > a {
+   /* background: #f8f8f8;*/
+    border-radius: 0;
+        border-bottom: 1px solid transparent;
+    border-top: none;
+    border-left: none;
+}
+      .nav-tabs > li.active > a {
+   /* background: #f8f8f8;*/
+    border-radius: 0;
+        border-bottom: 1px solid transparent;
+    border-top: none;
+}
+   /* box-shadow: inset 0 -8px 7px -9px rgba(0,0,0,.4),-2px -2px 5px -2px rgba(0,0,0,.4);*/
+}
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover {
+    /*background: #F5F5F5;
+    box-shadow: inset 0 0 0 0 rgba(0,0,0,.4),-2px -3px 5px -2px rgba(0,0,0,.4);*/
+}
+
+/* Tab Content */
+.tab-pane {
+    /*background: #F5F5F5;
+    box-shadow: 0 0 4px rgba(0,0,0,.4);*/
+    border-radius: 0;
+    text-align: center;
+    padding: 10px;
+}
+
+.page-container{ background:#f8f8f8;}     
+button.close > span{ color:#ff0099; }
+#scrapper-section{ background:#ffffff;} 
+#navigator {
+      position: fixed;
+width: 100%;
+background: url(../img/navigator-bg.png) no-repeat right bottom;
+/*background: none repeat scroll 0% 0% rgb(204, 204, 204);*/
+margin: 0px auto;
+display: block;
+overflow: hidden;
+left: auto;
+right: 0px;
+    top:0;
+z-index: 999999;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    background-color:#fff;
+      }
+      
+    /* SCRAPPER STYLE UI */
+      #rss-feed{
+    height: 100%;
+    background: linear-gradient(to bottom, #FFF 0px, #F5F5F5 200px, #EFEFEF 100%) repeat scroll 0% 0% transparent;
+}
+      #scrapper-section{ min-height:588px;border-left: 1px solid #ccc;backgroud-color:#fff;}
+      #scrapper-section.col-md-6, .media-uri.col-md-12 { margin-right: 0; padding-right: 0;padding-left: 0;}
+      .media-uri.col-md-12 { }
+      .media-uri #media-menu { /*border-bottom:1px solid rgba(0, 0, 0, 0.2);*/ }
+      #toolbar .nav-tabs > li{ /*margin-bottom:0;*/}
+	  #toolbar .tab-content{ border-top:1px solid #ddd;}
+	  #toolbar .nav > li > a:hover,
+	  #toolbar .nav > li > a:focus,
+	  #toolbar .nav > li > a:hover .fa {background-color:#fff; /*color:#11ace9;*/}
+	  
+	  #media-menu li a >.fa-rss, #media-menu li a:hover >.fa-rss{ color:orange;}
+	  #media-menu li a >.fa-twitter, #media-menu li a:hover > .fa-twitter{ color:#11ace9;}
+	  #media-menu li a >.fa-facebook, #media-menu li a:hover > .fa-facebook{ color:#347edd;}
+	  
+	  #feed-items-list{ border-top:1px solid rgba(0,0,0,0.2); padding-top: 15px;}
+      #feed-items-list .well { margin:0 auto;}
+	  #feed-items-list .well  > p{ text-align:center;}
+#scrapper-section .text-lg{ font-size:2.7rem;color:#ccc;}
+#scrapper-section > *{opacity:0.25;transition: all 0.5s ease-in-out 5s;}
+#scrapper-section:hover > * {opacity:1;transition: all 0.3s ease-in-out 0s;}
+#toolbar .fa, #toolbar icon {color:#bccbd1}
+.nav-tabs > li > div, .nav-tabs > li > a.dropbox-saver{ display:inline-block;}
+ .nav-tabs > li > a.dropbox-saver{position:relative; overflow:hidden; top:2.25px;}
+/* Great Select Style */
