@@ -1,0 +1,572 @@
+body {
+  background-color: #292548;
+}
+
+.flask {
+  height: 405px;
+  width: 368px;
+  position: absolute;
+  bottom: 0;
+}
+
+.flask_bottom {
+  bottom: 0;
+  position: absolute;
+}
+
+.big_triangle {
+  overflow: hidden;
+  position: relative;
+  width: 368px;
+  height: 250px;
+  background-color: #fff;
+}
+
+.big_triangle:before, .big_triangle:after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: 250px solid #292548;
+  position: absolute;
+  top: 0;
+  z-index: 100;
+}
+
+.big_triangle:before {
+  border-right: 152px solid transparent;
+  left: 0;
+}
+
+.big_triangle:after {
+  border-left: 152px solid transparent;
+  right: 0;
+}
+
+.flask_throat {
+  overflow: hidden;
+  height: 155px;
+  width: 64px;
+  position: absolute;
+  left: 152px;
+  top: 0;
+}
+
+.flask_throat_one {
+  position: absolute;
+  -webkit-transform: rotate(24deg);
+  transform: rotate(24deg);
+  -webkit-transform-origin: right top;
+  transform-origin: right top;
+  background-color: #5c30ae;
+  width: 150px;
+  height: 50px;
+  position: absolute;
+  z-index: 3;
+  right: -26px;
+  top: 110px;
+  -webkit-animation-name: animation_bg_element6;
+  animation-name: animation_bg_element6;
+  -webkit-animation-duration: 5s;
+  animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+}
+
+.flask_throat_two {
+  position: absolute;
+  -webkit-transform: rotate(20deg);
+  transform: rotate(20deg);
+  -webkit-transform-origin: right top;
+  transform-origin: right top;
+  background-color: #37acdd;
+  width: 150px;
+  height: 60px;
+  position: absolute;
+  z-index: 3;
+  right: -35px;
+  top: 35px;
+  -webkit-animation-name: animation_bg_element5;
+  animation-name: animation_bg_element5;
+  -webkit-animation-duration: 5s;
+  animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+}
+
+.flask_throat_three {
+  position: absolute;
+  background-color: #5c30ae;
+  width: 100%;
+  height: 50px;
+  position: absolute;
+  z-index: 3;
+  right: 0;
+  bottom: 0;
+  -webkit-animation-name: animation_bg_element6;
+  animation-name: animation_bg_element6;
+  -webkit-animation-duration: 5s;
+  animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+}
+
+.flask_throat_four {
+  position: absolute;
+  -webkit-transform: rotate(20deg);
+  transform: rotate(20deg);
+  -webkit-transform-origin: right top;
+  transform-origin: right top;
+  background-color: #6c49ac;
+  width: 150px;
+  height: 20px;
+  position: absolute;
+  z-index: 3;
+  right: -45px;
+  top: 100px;
+  -webkit-animation-name: animation_bg_element7;
+  animation-name: animation_bg_element7;
+  -webkit-animation-duration: 5s;
+  animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+}
+
+.flask_bottom_one {
+  width: 0;
+  height: 0;
+  border-bottom: 55px solid #3a2481;
+  border-left: 32px solid transparent;
+  border-right: 42px solid transparent;
+  position: absolute;
+  bottom: 0;
+  z-index: 4;
+  -webkit-animation-name: animation_bg_element1;
+  animation-name: animation_bg_element1;
+  -webkit-animation-duration: 5s;
+  animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+}
+
+.flask_bottom_two {
+  border-bottom: 165px solid #4266c0;
+  border-left: 93px solid transparent;
+  border-right: 200px solid transparent;
+  width: 0;
+  height: 0;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 2;
+  -webkit-animation-name: animation_bg_element2;
+  animation-name: animation_bg_element2;
+  -webkit-animation-duration: 5s;
+  animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+}
+
+.flask_bottom_five {
+  position: absolute;
+  background-color: #4248c0;
+  width: 100%;
+  height: 75px;
+  position: absolute;
+  z-index: 3;
+  left: 50px;
+  bottom: 18px;
+  -webkit-transform: rotate(24deg);
+  transform: rotate(24deg);
+  -webkit-transform-origin: left top;
+  transform-origin: left top;
+  -webkit-animation-name: animation_bg_element3;
+  animation-name: animation_bg_element3;
+  -webkit-animation-duration: 5s;
+  animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+}
+
+.flask_bottom_six {
+  position: absolute;
+  background-color: #37acdd;
+  width: 100%;
+  height: 170px;
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  bottom: 0;
+  -webkit-animation-name: animation_bg_element4;
+  animation-name: animation_bg_element4;
+  -webkit-animation-duration: 5s;
+  animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+}
+
+.flask_bottom_seven {
+  position: absolute;
+  background-color: #1493c8;
+  width: 100%;
+  height: 218px;
+  position: absolute;
+  z-index: 3;
+  right: -95px;
+  bottom: 24px;
+  -webkit-transform: rotate(24deg);
+  transform: rotate(24deg);
+  -webkit-transform-origin: right top;
+  transform-origin: right top;
+  -webkit-animation-name: animation_bg_element5;
+  animation-name: animation_bg_element5;
+  -webkit-animation-duration: 5s;
+  animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+}
+
+.flask_bottom_eight {
+  position: absolute;
+  background-color: #5c30ae;
+  width: 100%;
+  height: 50px;
+  position: absolute;
+  z-index: 3;
+  right: -95px;
+  bottom: 218px;
+  -webkit-transform: rotate(-12deg);
+  transform: rotate(-12deg);
+  -webkit-transform-origin: left top;
+  transform-origin: left top;
+  -webkit-animation-name: animation_bg_element6;
+  animation-name: animation_bg_element6;
+  -webkit-animation-duration: 5s;
+  animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+}
+
+.circle {
+  border-radius: 50%;
+  border: 1px solid #fff;
+  position: absolute;
+  left: 45%;
+  top: 30px;
+  -webkit-animation-name: circle;
+  animation-name: circle;
+  -webkit-animation-duration: 5s;
+  animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+}
+
+.little_circle {
+  width: 5px;
+  height: 5px;
+}
+
+.little_circle_white {
+  background-color: #fff;
+  left: 48%;
+  -webkit-animation-duration: 2000ms;
+  animation-duration: 2000ms;
+}
+
+.little_circle_purpure {
+  background-color: #6c49ac;
+  border: 1px solid #6c49ac;
+  left: 52%;
+  -webkit-animation-duration: 2000ms;
+  animation-duration: 2000ms;
+  -webkit-animation-delay: 100ms;
+  animation-delay: 100ms;
+}
+
+.little_circle_blue {
+  background-color: #117fba;
+  border: 1px solid #117fba;
+  left: 45%;
+  -webkit-animation-duration: 2000ms;
+  animation-duration: 2000ms;
+  -webkit-animation-delay: 200ms;
+  animation-delay: 200ms;
+}
+
+.small_circle {
+  width: 20px;
+  height: 20px;
+  -webkit-animation-duration: 4200ms;
+  animation-duration: 4200ms;
+  -webkit-animation-delay: 300ms;
+  animation-delay: 300ms;
+}
+
+.middle_circle {
+  width: 45px;
+  height: 45px;
+}
+
+@-webkit-keyframes circle {
+  0% {
+    -webkit-transform: translateZ(0px) translateY(20px) scale(1);
+    transform: translateZ(0px) translateY(20px) scale(1);
+    opacity: 1;
+  }
+  85% {
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateZ(0px) translateY(-200px) scale(0);
+    transform: translateZ(0px) translateY(-200px) scale(0);
+    opacity: 0;
+  }
+}
+
+@keyframes circle {
+  0% {
+    -webkit-transform: translateZ(0px) translateY(20px) scale(1);
+    transform: translateZ(0px) translateY(20px) scale(1);
+    opacity: 1;
+  }
+  85% {
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateZ(0px) translateY(-200px) scale(0);
+    transform: translateZ(0px) translateY(-200px) scale(0);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes animation_bg_element1 {
+  0% {
+    border-bottom-color: #3a2481;
+  }
+  25% {
+    border-bottom-color: #242781;
+  }
+  50% {
+    border-bottom-color: #244081;
+  }
+  75% {
+    border-bottom-color: #242781;
+  }
+}
+
+@keyframes animation_bg_element1 {
+  0% {
+    border-bottom-color: #3a2481;
+  }
+  25% {
+    border-bottom-color: #242781;
+  }
+  50% {
+    border-bottom-color: #244081;
+  }
+  75% {
+    border-bottom-color: #242781;
+  }
+}
+
+@-webkit-keyframes animation_bg_element2 {
+  0% {
+    border-bottom-color: #4266c0;
+  }
+  25% {
+    border-bottom-color: #4287c0;
+  }
+  50% {
+    border-bottom-color: #42a8c0;
+  }
+  75% {
+    border-bottom-color: #4287c0;
+  }
+}
+
+@keyframes animation_bg_element2 {
+  0% {
+    border-bottom-color: #4266c0;
+  }
+  25% {
+    border-bottom-color: #4287c0;
+  }
+  50% {
+    border-bottom-color: #42a8c0;
+  }
+  75% {
+    border-bottom-color: #4287c0;
+  }
+}
+
+@-webkit-keyframes animation_bg_element3 {
+  0% {
+    background-color: #4248c0;
+  }
+  25% {
+    background-color: #4269c0;
+  }
+  50% {
+    background-color: #428ac0;
+  }
+  75% {
+    background-color: #4269c0;
+  }
+}
+
+@keyframes animation_bg_element3 {
+  0% {
+    background-color: #4248c0;
+  }
+  25% {
+    background-color: #4269c0;
+  }
+  50% {
+    background-color: #428ac0;
+  }
+  75% {
+    background-color: #4269c0;
+  }
+}
+
+@-webkit-keyframes animation_bg_element4 {
+  0% {
+    background-color: #37acdd;
+  }
+  25% {
+    background-color: #37d8dd;
+  }
+  50% {
+    background-color: #37ddb5;
+  }
+  75% {
+    background-color: #37d8dd;
+  }
+}
+
+@keyframes animation_bg_element4 {
+  0% {
+    background-color: #37acdd;
+  }
+  25% {
+    background-color: #37d8dd;
+  }
+  50% {
+    background-color: #37ddb5;
+  }
+  75% {
+    background-color: #37d8dd;
+  }
+}
+
+@-webkit-keyframes animation_bg_element5 {
+  0% {
+    background-color: #1493c8;
+  }
+  25% {
+    background-color: #14c2c8;
+  }
+  50% {
+    background-color: #14c89d;
+  }
+  75% {
+    background-color: #14c2c8;
+  }
+}
+
+@keyframes animation_bg_element5 {
+  0% {
+    background-color: #1493c8;
+  }
+  25% {
+    background-color: #14c2c8;
+  }
+  50% {
+    background-color: #14c89d;
+  }
+  75% {
+    background-color: #14c2c8;
+  }
+}
+
+@-webkit-keyframes animation_bg_element6 {
+  0% {
+    background-color: #5c30ae;
+  }
+  25% {
+    background-color: #3a30ae;
+  }
+  50% {
+    background-color: #3048ae;
+  }
+  75% {
+    background-color: #3a30ae;
+  }
+}
+
+@keyframes animation_bg_element6 {
+  0% {
+    background-color: #5c30ae;
+  }
+  25% {
+    background-color: #3a30ae;
+  }
+  50% {
+    background-color: #3048ae;
+  }
+  75% {
+    background-color: #3a30ae;
+  }
+}
+
+@-webkit-keyframes animation_bg_element7 {
+  0% {
+    background-color: #6c49ac;
+  }
+  25% {
+    background-color: #5249ac;
+  }
+  50% {
+    background-color: #495aac;
+  }
+  75% {
+    background-color: #5249ac;
+  }
+}
+
+@keyframes animation_bg_element7 {
+  0% {
+    background-color: #6c49ac;
+  }
+  25% {
+    background-color: #5249ac;
+  }
+  50% {
+    background-color: #495aac;
+  }
+  75% {
+    background-color: #5249ac;
+  }
+}
