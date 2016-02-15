@@ -269,9 +269,9 @@ body {
 
 .circle {
   border-radius: 50%;
-  border: 1px solid #fff;
+  border: 4px solid #fff;
   position: absolute;
-  left: 45%;
+  left: 12%;
   top: 30px;
   -webkit-animation-name: circle;
   animation-name: circle;
@@ -290,15 +290,15 @@ body {
 
 .little_circle_white {
   background-color: #fff;
-  left: 48%;
+  left: 12%;
   -webkit-animation-duration: 2000ms;
   animation-duration: 2000ms;
 }
 
 .little_circle_purpure {
   background-color: #6c49ac;
-  border: 1px solid #6c49ac;
-  left: 52%;
+  border: 4px solid #6c49ac;
+  left: 12%;
   -webkit-animation-duration: 2000ms;
   animation-duration: 2000ms;
   -webkit-animation-delay: 100ms;
@@ -307,8 +307,8 @@ body {
 
 .little_circle_blue {
   background-color: #117fba;
-  border: 1px solid #117fba;
-  left: 45%;
+  border: 4px solid #117fba;
+  left: 12%;
   -webkit-animation-duration: 2000ms;
   animation-duration: 2000ms;
   -webkit-animation-delay: 200ms;
